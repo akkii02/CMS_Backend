@@ -35,6 +35,24 @@ const userSchema = new mongoose.Schema({
     clientId: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Client'
+    },
+    isProfileComplete: {
+        type: Boolean,
+        default: false
+    },
+    credits: {
+        type: Number,
+        default: 10
+    },
+    plan: {
+        type: String,
+        enum: ['free', 'premium'],
+        default: 'free'
+    },
+    status: {
+        type: String,
+        enum: ['active', 'suspended'],
+        default: 'active'
     }
 }, { timestamps: true });
 

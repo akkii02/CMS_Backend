@@ -23,7 +23,16 @@ const clientSchema = new mongoose.Schema({
     brandSettings: {
         logoUrl: { type: String, default: '' },
         primaryColor: { type: String, default: '#4f46e5' },
-        footerText: { type: String, default: '' }
+        secondaryColor: { type: String, default: '#7c3aed' },
+        fontFamily: { type: String, default: 'Inter' },
+        tagline: { type: String, default: '' },
+        footerText: { type: String, default: '' },
+        websiteUrl: { type: String, default: '' },
+        socialLinks: {
+            twitter: { type: String, default: '' },
+            linkedin: { type: String, default: '' },
+            instagram: { type: String, default: '' }
+        }
     }
 }, { timestamps: true });
 
